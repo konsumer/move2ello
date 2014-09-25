@@ -1,0 +1,21 @@
+{
+  "name": "move2ello",
+  "version": "0.0.0",
+  "description": "Migration tool for facebook to ello",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [
+    "ello",
+    "facebook"
+  ],
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "errorhandler": "^1.2.0",
+    "express": "^4.9.5",
+    "method-override": "^2.2.0"
+  }
+}
