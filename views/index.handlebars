@@ -1,0 +1,83 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>move2ello</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<style>
+		.friend {
+			text-align:center;
+		}
+		
+		@media only screen and (max-width : 326px) {
+			.jumbotron h1 img {
+				width: 30px;
+				margin-top: 3px;
+			}
+		}
+
+		@media only screen and (max-width : 768px) {
+			#forklink {
+				display:none;
+			}
+		}
+		
+		#forklink img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: 0;
+		}
+		</style>
+	</head>
+	<body ng-controller="MainCtl">
+		<div class="jumbotron">
+			<div class="container clearfix">
+				<h1>
+					move2<a href="https://ello.co" target="_new">ello</a>
+					<img class="pull-right" src="https://graph.facebook.com/{{me.fb}}/picture?type=square">
+				</h1>
+			</div>
+			<div class="container">If you set your ello username, your facebook friends will be able to find you if they come here. Also, feel free to follow me. I am <a href="https://ello.co/konsumer">konsumer</a>.</div>
+		</div>
+
+		<div class="container">
+			{{#if me.ello}}
+				<p>I know you as <a href="https://ello.co/{{me.ello}}">{{me.ello}}</a>.</p>
+				<p>I can totally <a href="/forget" class="btn btn-lg btn-danger">forget</a> you, if you're having second-thoughts.</p>
+			{{else}}
+				<form method="POST" action="/save">
+					<p>I dunno your ello username, yet. Enter it here, so your friends can find you:</p>
+					<div class="form-group col-xs-6">
+						<input class="form-control" type="text" name="ello" placeholder="ello username">
+					</div>
+					<div class="col-xs-6">
+						<button class="btn btn-lg btn-primary">save</button>
+					</div>
+				</form>
+			{{/if}}
+		</div>
+
+		<div class="container">
+			{{#if friends.length}}
+				<p>Here are your friends who have told me their ello usernames. You can click on them to add them to your ello friends.</p>
+				<div class="row">
+					{{#each friends}}
+						<div class="friend col-sm-3">
+							<a class="thumbnail" target="_new" href="https://ello.co/{{ello}}" alt="@{{ello}}">
+								<img width="100%" class="img img-responsive" src="https://graph.facebook.com/{{fb}}/picture?type=large&width=200&height=200">
+								<div class="caption">{{name}}</div>
+							</a>
+						</div>
+					{{/each}}
+				</div>
+			{{else}}
+				<p>None of your facebook friends have told me their ello usernames, yet. Tell them to come here and do that.</p>
+			{{/if}}
+		</div>
+
+		<a id="forklink" href="https://github.com/konsumer/move2ello"><img src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+	</body>
+</html>
