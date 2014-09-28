@@ -11,7 +11,9 @@ Here are things I will eventually implement:
 
 ## installing your own
 
-You need to setup a new facebook web app and set these environment variables in the app's heroku config:
+[deploy your own on heroku](https://heroku.com/deploy?template=https://github.com/konsumer/move2ello)
+
+You need to setup a new facebook web app and set these environment variables in the app's environment variables:
 
     MONGOLAB_URI=mongodb://BLAHBLAHBLAH
     FACEBOOK_APP_ID=BLAH
