@@ -13,11 +13,11 @@
 
   "env": {
     "FACEBOOK_APP_ID": {
-      "description": "Your Facebook App ID.",
+      "description": "Your Facebook App ID from https://developers.facebook.com/apps/",
       "required": true
     },
     "FACEBOOK_APP_SECRET": {
-      "description": "Your Facebook App Secret.",
+      "description": "Your Facebook App Secret from https://developers.facebook.com/apps/",
       "required": true
     }
   },
