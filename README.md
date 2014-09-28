@@ -6,12 +6,12 @@ This is a lil facebook-to-ello migration tool that has been useful in my friend 
 
 Here are things I will eventually implement:
 
-*  Unfortunately, facebook won't let an application get your friend-list, but I will look into working around it.
+*  Unfortunately, facebook won't let an application get your entire friend-list, just the friends that have used the app, but I will look into working around it.
 *  in the long-term: maybe multi-migrations! auth with whatever services you like (twitter, facebook, ello, etc) and share the mapping with whover you like (public, "just my twitter friends", "just my fb friends", etc)
 
-## installiung your own
+## installing your own
 
-You need to setup a new facebook web app and set these environment variables in `.env` or in the app's heroku config:
+You need to setup a new facebook web app and set these environment variables in the app's heroku config:
 
     MONGOLAB_URI=mongodb://BLAHBLAHBLAH
     FACEBOOK_APP_ID=BLAH
