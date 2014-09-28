@@ -6,7 +6,6 @@ This is a lil facebook-to-ello migration tool that has been useful in my friend 
 
 Here are things I will eventually implement:
 
-*  server-side facebook login for better user-security
 *  Unfortunately, facebook won't let an application get your friend-list, but I will look into working around it.
 *  in the long-term: maybe multi-migrations! auth with whatever services you like (twitter, facebook, ello, etc) and share the mapping with whover you like (public, "just my twitter friends", "just my fb friends", etc)
 
