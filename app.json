@@ -1,0 +1,25 @@
+{
+  "name": "move2ello",
+  "description": "Migration tool for facebook to ello",
+
+  "keywords": [
+    "ello",
+    "facebook"
+  ],
+
+  "website": "https://github.com/konsumer/move2ello",
+  "repository": "https://github.com/konsumer/move2ello",
+  "success_url": "/status",
+
+  "env": {
+    "FACEBOOK_APP_ID": {
+      "description": "Your Facebook App ID.",
+      "required": true
+    },
+    "FACEBOOK_APP_SECRET": {
+      "description": "Your Facebook App Secret.",
+      "required": true
+    }
+  },
+  "addons": ["mongolab"]
+}
