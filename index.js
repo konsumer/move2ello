@@ -62,7 +62,7 @@ function requireUser(req, res, next){
 	graph.setAppSecret(process.env.FACEBOOK_APP_SECRET);
 	graph.setAccessToken(req.cookies.token);
 	graph.get('/me', function(err, fb){
-		if(err) return res.status(500).send(err);
+		if(err) return res.redirect('/auth');
 		Friend.findOne({'fb':fb.id},function(err, me){
 			if(err) return res.status(500).send(err);
 			if (!me){
